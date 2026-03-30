@@ -16,7 +16,7 @@ fn main() {
         //llamada a la biblioteca.método específico. manejo de errores
         io::stdin().read_line(&mut guess).expect("Error al leer la entrada.");
         //Reformato de guess
-        let guess: u32 = guess.trim().parse(){
+        let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
